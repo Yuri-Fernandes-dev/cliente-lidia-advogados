@@ -1,0 +1,609 @@
+/* Variáveis */
+:root {
+    --bg-color: #F8F5F0;
+    --text-color: #4267b2;
+    --accent-color: #000;
+    --white: #fff;
+    --light-gray: #f0f0f0;
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Cabeçalho Novo Design */
+.header {
+    padding: 1rem 0;
+    background-color: var(--bg-color);
+    position: relative;
+    z-index: 100;
+    border-bottom: 1px solid rgba(66, 103, 178, 0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    height: 90px;
+    display: flex;
+    align-items: center;
+}
+
+.main-logo {
+    height: 100%;
+    width: auto;
+}
+
+/* Removendo estilos não utilizados */
+.logo-text, .logo-title, .logo-subtitle, .logo-icon {
+    display: none;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+/* Navegação Principal */
+.main-nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    font-size: 1.1rem;
+    position: relative;
+    padding-bottom: 0.3rem;
+    transition: var(--transition);
+}
+
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--text-color);
+    transition: var(--transition);
+}
+
+.nav-menu a:hover::after,
+.nav-menu a.active::after {
+    width: 100%;
+}
+
+/* Social Links no Cabeçalho */
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icon {
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.social-icon:hover {
+    color: var(--accent-color);
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 4rem 0;
+    min-height: calc(100vh - 200px);
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 2.8rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.hero-text .subtext {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 500px;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.btn-contato {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--white);
+    padding: 0.8rem 1.5rem;
+    border-radius: 0;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-contato:hover {
+    background-color: var(--text-color);
+}
+
+/* Seção de Contato */
+.contact-section {
+    padding: 4rem 0;
+    background-color: var(--light-gray);
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--white);
+    padding: 2rem 0;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.05);
+    margin-top: auto;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-logo {
+    margin-bottom: 1rem;
+}
+
+.footer-logo .main-logo {
+    height: 40px;
+}
+
+.footer .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer .social-links {
+    margin: 1rem 0;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Responsividade para a Home */
+@media (max-width: 992px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-text {
+        order: 1;
+    }
+    
+    .hero-image {
+        order: 0;
+        justify-content: center;
+    }
+    
+    .hero-text .subtext {
+        margin: 0 auto 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-menu {
+        margin: 1rem 0;
+    }
+    
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .nav-menu {
+        gap: 1rem;
+    }
+    
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+    
+    .social-links {
+        gap: 0.5rem;
+    }
+}
+
+/* Estilos para as páginas internas */
+/* Mantendo parte do CSS anterior para as páginas sobre e serviços */
+
+/* Estilo da página Sobre */
+.sobre-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: 4rem 0;
+}
+
+.sobre-image {
+    flex: 1;
+}
+
+.sobre-image img {
+    max-height: 400px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.sobre-text {
+    flex: 1;
+}
+
+.sobre-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.sobre-text h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.sobre-text p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+/* Estilo da página Serviços */
+.servicos-content {
+    padding: 4rem 0;
+}
+
+.servicos-content h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.service-item {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon {
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.service-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+/* Formulário de contato */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+}
+
+.contact-info {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.contact-item i {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-right: 1rem;
+    margin-top: 0.3rem;
+}
+
+.contact-form {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid rgba(66, 103, 178, 0.2);
+    border-radius: 5px;
+    font-family: 'Raleway', sans-serif;
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--text-color);
+}
+
+.btn-submit {
+    background-color: var(--accent-color);
+    color: var(--white);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 0;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-submit:hover {
+    background-color: var(--text-color);
+}
+
+/* Estilos adicionais para a página Sobre */
+.formacao-lista {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.formacao-lista li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.formacao-lista li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 8px;
+    height: 8px;
+    background-color: var(--text-color);
+    border-radius: 50%;
+}
+
+/* Estilos adicionais para a página Serviços */
+.servicos-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    font-size: 1.1rem;
+}
+
+.service-item p {
+    color: #555;
+    line-height: 1.5;
+}
+
+.servicos-footer {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.btn-servicos {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--white);
+    padding: 0.8rem 1.5rem;
+    border-radius: 0;
+    margin-top: 1.5rem;
+    transition: var(--transition);
+}
+
+.btn-servicos:hover {
+    background-color: var(--text-color);
+    transform: translateY(-3px);
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animações para elementos que entram na tela */
+.animate {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsividade para páginas internas */
+@media (max-width: 992px) {
+    .sobre-content, 
+    .contact-container {
+        flex-direction: column;
+        grid-template-columns: 1fr;
+    }
+    
+    .sobre-image {
+        order: 0;
+    }
+    
+    .sobre-text {
+        order: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .sobre-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+/* Texto preto */
+.black-text {
+    color: #000 !important;
+}
+
+/* Seção de serviços na página inicial */
+#servicos-home .services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+#servicos-home .service-item {
+    height: 100%;
+}
+
+/* Botão flutuante do WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.3);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    background-color: #20ba5a;
+    transform: scale(1.1);
+}
+
+/* Espaçamento da seção de serviços */
+.servicos-footer {
+    margin-top: 2rem;
+    text-align: center;
+} 

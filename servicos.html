@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lídia Vitor - Advogada & Mestre</title>
+    <title>Serviços - Lídia Vitor</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
-<body class="home-page">
+<body>
     <!-- Cabeçalho -->
     <header class="header">
         <div class="container">
@@ -21,9 +21,9 @@
                 
                 <nav class="main-nav">
                     <ul class="nav-menu">
-                        <li><a href="index.html" class="active">Início</a></li>
+                        <li><a href="index.html">Início</a></li>
                         <li><a href="sobre.html">Sobre</a></li>
-                        <li><a href="servicos.html">Serviços</a></li>
+                        <li><a href="servicos.html" class="active">Serviços</a></li>
                     </ul>
                 </nav>
                 
@@ -41,27 +41,12 @@
 
     <!-- Conteúdo Principal -->
     <main>
-        <section id="hero" class="hero-section">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <h1 class="slogan">Ao seu lado, protegendo seus direitos e sua família.</h1>
-                        <p class="subtext black-text">Especialista em soluções jurídicas com ética, estratégia e excelência</p>
-                        <a href="#contato" class="btn-contato">Fale Conosco</a>
-                    </div>
-                    <div class="hero-image">
-                        <img src="img/baner.png" alt="Balança da Justiça">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção Serviços na Página Inicial -->
-        <section id="servicos-home" class="section">
+        <!-- Seção Serviços -->
+        <section id="servicos" class="section">
             <div class="container">
                 <div class="section-content servicos-content">
-                    <h2>Nossos Serviços</h2>
-                    <p class="servicos-intro">Nossa equipe especializada oferece atendimento personalizado em diversas áreas do Direito de Família:</p>
+                    <h2>Serviços</h2>
+                    <p class="servicos-intro">Nossa equipe especializada oferece atendimento personalizado em diversas áreas do Direito de Família, atendendo às necessidades específicas de cada cliente:</p>
                     <div class="services-list">
                         <div class="service-item">
                             <div class="service-icon"><i class="fas fa-balance-scale"></i></div>
@@ -70,13 +55,33 @@
                         </div>
                         <div class="service-item">
                             <div class="service-icon"><i class="fas fa-file-contract"></i></div>
-                            <h3>Divórcio e partilha de bens</h3>
-                            <p>Assessoria completa em processos de divórcio e partilha justa de bens.</p>
+                            <h3>Divórcio, união estável e partilha de bens</h3>
+                            <p>Assessoria completa em processos de divórcio, reconhecimento e dissolução de união estável, e partilha justa de bens.</p>
                         </div>
                         <div class="service-item">
                             <div class="service-icon"><i class="fas fa-child"></i></div>
-                            <h3>Guarda e visitas</h3>
-                            <p>Mediação e representação em questões relacionadas à guarda de filhos e regime de visitas.</p>
+                            <h3>Guarda, visitas e convivência com menores</h3>
+                            <p>Mediação e representação em questões relacionadas à guarda de filhos, regime de visitas e convivência familiar.</p>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-icon"><i class="fas fa-hand-holding-usd"></i></div>
+                            <h3>Execução/obrigação de pensões atrasadas</h3>
+                            <p>Acompanhamento jurídico para garantir o recebimento de pensões alimentícias em atraso através dos meios legais adequados.</p>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-icon"><i class="fas fa-search"></i></div>
+                            <h3>Investigação e reconhecimento de paternidade</h3>
+                            <p>Suporte completo em processos de investigação e reconhecimento de paternidade, garantindo os direitos das partes envolvidas.</p>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-icon"><i class="fas fa-file-signature"></i></div>
+                            <h3>Planejamento sucessório e inventário</h3>
+                            <p>Assessoria especializada em planejamento sucessório e processos de inventário, visando a proteção patrimonial e familiar.</p>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-icon"><i class="fas fa-gavel"></i></div>
+                            <h3>Procedimento de interdição, tutela e curatela</h3>
+                            <p>Orientação e representação em processos de interdição, tutela e curatela, assegurando os direitos e necessidades de pessoas vulneráveis.</p>
                         </div>
                         <div class="service-item">
                             <div class="service-icon"><i class="fas fa-heart"></i></div>
@@ -85,47 +90,8 @@
                         </div>
                     </div>
                     <div class="servicos-footer">
-                        <a href="servicos.html" class="btn-servicos">Ver todos os serviços</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção Contato -->
-        <section id="contato" class="section contact-section">
-            <div class="container">
-                <div class="section-content contato-content">
-                    <h2>Fale Conosco</h2>
-                    <div class="contact-container">
-                        <div class="contact-info">
-                            <div class="contact-item">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <p>Rua Exemplo, 123 - Centro<br>CEP 00000-000 - Cidade/UF</p>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-phone"></i>
-                                <p>(31) 9172-1946</p>
-                            </div>
-                            <div class="contact-item">
-                                <i class="far fa-envelope"></i>
-                                <p>contato@lidiavitor.com.br</p>
-                            </div>
-                        </div>
-                        <form class="contact-form">
-                            <div class="form-group">
-                                <input type="text" id="name" name="name" placeholder="Nome" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" id="email" name="email" placeholder="Email" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="tel" id="phone" name="phone" placeholder="Telefone">
-                            </div>
-                            <div class="form-group">
-                                <textarea id="message" name="message" placeholder="Mensagem" rows="5" required></textarea>
-                            </div>
-                            <button type="submit" class="btn-submit">Enviar</button>
-                        </form>
+                        <p>Todos os serviços são conduzidos com ética, sigilo profissional e comprometimento com os interesses e bem-estar de nossos clientes.</p>
+                        <a href="index.html#contato" class="btn-servicos">Agende uma Consulta</a>
                     </div>
                 </div>
             </div>
@@ -151,11 +117,11 @@
         </div>
     </footer>
 
+    <script src="script.js"></script>
+    
     <!-- Botão flutuante do WhatsApp -->
     <a href="https://wa.me/5531917219466" target="_blank" class="whatsapp-float">
         <i class="fab fa-whatsapp"></i>
     </a>
-
-    <script src="script.js"></script>
 </body>
 </html> 
