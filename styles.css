@@ -51,6 +51,10 @@ img {
     max-width: 100%;
     height: auto;
     display: block;
+    /* Melhorias gerais para qualidade de imagem */
+    image-rendering: auto;
+    image-rendering: optimizeQuality;
+    -ms-interpolation-mode: bicubic;
 }
 
 .container {
@@ -81,7 +85,7 @@ img {
 }
 
 .logo-image {
-    height: 90px;
+    height: 120px;
     display: flex;
     align-items: center;
 }
@@ -89,6 +93,31 @@ img {
 .main-logo {
     height: 100%;
     width: auto;
+    /* Técnicas para melhorar a qualidade da imagem */
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: auto;
+    /* Para navegadores modernos */
+    image-rendering: high-quality;
+    
+    /* Suavização de bordas */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    
+    /* Evitar interpolação que causa blur */
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-crisp-edges;
+    
+    /* Fallback para qualidade geral */
+    image-rendering: optimizeQuality;
+    
+    /* Ajuste para manter proporção */
+    object-fit: contain;
+    object-position: center;
+    
+    /* Transição suave */
+    transition: var(--transition);
 }
 
 /* Removendo estilos não utilizados */
@@ -234,7 +263,21 @@ footer {
 }
 
 .footer-logo .main-logo {
-    height: 40px;
+    height: 60px;
+    /* Aplicando as mesmas técnicas de qualidade de imagem */
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: auto;
+    image-rendering: high-quality;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-crisp-edges;
+    image-rendering: optimizeQuality;
+    object-fit: contain;
+    object-position: center;
+    transition: var(--transition);
 }
 
 .footer .logo {
@@ -318,7 +361,7 @@ footer {
 }
 
 .sobre-image img {
-    max-height: 400px;
+    max-height: 500px;
     object-fit: cover;
     width: 100%;
 }
@@ -335,11 +378,17 @@ footer {
 .sobre-text h3 {
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
+    color: var(--text-color);
 }
 
 .sobre-text p {
     margin-bottom: 1.5rem;
     font-size: 1.1rem;
+    color: #000;
+}
+
+.sobre-text .formacao-lista li {
+    color: #000;
 }
 
 /* Estilo da página Serviços */
@@ -606,4 +655,16 @@ footer {
 .servicos-footer {
     margin-top: 2rem;
     text-align: center;
+}
+
+/* Classe específica para logos e imagens que precisam de alta qualidade */
+.high-quality-image {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    image-rendering: high-quality;
+    image-rendering: optimizeQuality;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    object-fit: contain;
+    object-position: center;
 } 
