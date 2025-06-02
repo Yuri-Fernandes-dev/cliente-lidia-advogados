@@ -182,59 +182,59 @@ img {
 
 /* Hero Section */
 .hero-section {
-    padding: 4rem 0;
-    min-height: calc(100vh - 200px);
+    background: 
+        linear-gradient(to right, rgba(248, 245, 240, 0.95) 0%, rgba(248, 245, 240, 0.7) 40%, rgba(248, 245, 240, 0.3) 70%, transparent 100%),
+        url('img/baner.png') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    padding-left: 5%;
+    padding-top: 15vh;
+    color: #4267b2;
 }
 
 .hero-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
+    max-width: 600px;
 }
 
 .hero-text {
-    flex: 1;
+    max-width: 600px;
 }
 
 .hero-text h1 {
-    font-size: 2.8rem;
-    line-height: 1.2;
-    margin-bottom: 1.5rem;
-    color: var(--text-color);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #4267b2;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
 }
 
 .hero-text .subtext {
     font-size: 1.2rem;
     margin-bottom: 2rem;
-    max-width: 500px;
+    color: #4267b2;
 }
 
 .hero-image {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.hero-image img {
-    max-width: 100%;
-    height: auto;
+    display: none; /* Não precisa de imagem separada */
 }
 
 .btn-contato {
+    background-color: #000;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
     display: inline-block;
-    background-color: var(--accent-color);
-    color: var(--white);
-    padding: 0.8rem 1.5rem;
-    border-radius: 0;
-    font-weight: 600;
     transition: var(--transition);
 }
 
 .btn-contato:hover {
-    background-color: var(--text-color);
+    background-color: #333;
 }
 
 /* Seção de Contato */
@@ -297,22 +297,21 @@ footer {
 
 /* Responsividade para a Home */
 @media (max-width: 992px) {
-    .hero-content {
-        flex-direction: column;
-        text-align: center;
+    .hero-section {
+        padding: 2rem;
+        padding-top: 12vh;
+        background: 
+            linear-gradient(to right, rgba(248, 245, 240, 0.6) 0%, rgba(248, 245, 240, 0.2) 40%, transparent 70%),
+            url('img/baner-celular.png') no-repeat center center;
+        background-size: cover;
     }
     
-    .hero-text {
-        order: 1;
-    }
-    
-    .hero-image {
-        order: 0;
-        justify-content: center;
+    .hero-text h1 {
+        font-size: 2.2rem;
     }
     
     .hero-text .subtext {
-        margin: 0 auto 2rem;
+        font-size: 1.1rem;
     }
 }
 
@@ -326,8 +325,30 @@ footer {
         margin: 1rem 0;
     }
     
+    .hero-section {
+        padding: 2rem;
+        padding-top: 8vh;
+        text-align: left;
+        background: 
+            linear-gradient(to bottom, rgba(248, 245, 240, 0.5) 0%, rgba(248, 245, 240, 0.2) 40%, transparent 80%),
+            url('img/baner-celular.png') no-repeat center center;
+        background-size: cover;
+    }
+    
     .hero-text h1 {
-        font-size: 2.2rem;
+        font-size: 1.8rem;
+    }
+    
+    .hero-text .subtext {
+        font-size: 1rem;
+    }
+    
+    .hero-content {
+        max-width: 100%;
+    }
+    
+    .hero-text {
+        max-width: 100%;
     }
 }
 
@@ -336,8 +357,26 @@ footer {
         gap: 1rem;
     }
     
+    .hero-section {
+        padding: 1.5rem;
+        padding-top: 6vh;
+        background: 
+            linear-gradient(to bottom, rgba(248, 245, 240, 0.6) 0%, rgba(248, 245, 240, 0.3) 30%, transparent 60%),
+            url('img/baner-celular.png') no-repeat center center;
+        background-size: cover;
+    }
+    
     .hero-text h1 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
+    }
+    
+    .hero-text .subtext {
+        font-size: 0.9rem;
+    }
+    
+    .btn-contato {
+        padding: 10px 20px;
+        font-size: 0.9rem;
     }
     
     .social-links {
